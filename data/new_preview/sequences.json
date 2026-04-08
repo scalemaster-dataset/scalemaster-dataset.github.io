@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Basement_01",
+    "ply_path": "data/new_preview/Basement_01.ply",
+    "trajectory_path": "data/new_preview/Basement_01_trajectory.json"
+  },
+  {
+    "name": "HotelRoom_01",
+    "ply_path": "data/new_preview/HotelRoom_01.ply",
+    "trajectory_path": "data/new_preview/HotelRoom_01_trajectory.json"
+  },
+  {
+    "name": "Lab_01",
+    "ply_path": "data/new_preview/Lab_01.ply",
+    "trajectory_path": "data/new_preview/Lab_01_trajectory.json"
+  },
+  {
+    "name": "LargeHall_01",
+    "ply_path": "data/new_preview/LargeHall_01.ply",
+    "trajectory_path": "data/new_preview/LargeHall_01_trajectory.json"
+  },
+  {
+    "name": "LargeHall_02",
+    "ply_path": "data/new_preview/LargeHall_02.ply",
+    "trajectory_path": "data/new_preview/LargeHall_02_trajectory.json"
+  },
+  {
+    "name": "LargeHall_03",
+    "ply_path": "data/new_preview/LargeHall_03.ply",
+    "trajectory_path": "data/new_preview/LargeHall_03_trajectory.json"
+  },
+  {
+    "name": "LargeHall_04",
+    "ply_path": "data/new_preview/LargeHall_04.ply",
+    "trajectory_path": "data/new_preview/LargeHall_04_trajectory.json"
+  },
+  {
+    "name": "LargeHall_05",
+    "ply_path": "data/new_preview/LargeHall_05.ply",
+    "trajectory_path": "data/new_preview/LargeHall_05_trajectory.json"
+  },
+  {
+    "name": "Library_01",
+    "ply_path": "data/new_preview/Library_01.ply",
+    "trajectory_path": "data/new_preview/Library_01_trajectory.json"
+  },
+  {
+    "name": "Library_02",
+    "ply_path": "data/new_preview/Library_02.ply",
+    "trajectory_path": "data/new_preview/Library_02_trajectory.json"
+  },
+  {
+    "name": "Library_03",
+    "ply_path": "data/new_preview/Library_03.ply",
+    "trajectory_path": "data/new_preview/Library_03_trajectory.json"
+  },
+  {
+    "name": "Library_04",
+    "ply_path": "data/new_preview/Library_04.ply",
+    "trajectory_path": "data/new_preview/Library_04_trajectory.json"
+  },
+  {
+    "name": "Library_05",
+    "ply_path": "data/new_preview/Library_05.ply",
+    "trajectory_path": "data/new_preview/Library_05_trajectory.json"
+  },
+  {
+    "name": "Library_06",
+    "ply_path": "data/new_preview/Library_06.ply",
+    "trajectory_path": "data/new_preview/Library_06_trajectory.json"
+  },
+  {
+    "name": "Library_07",
+    "ply_path": "data/new_preview/Library_07.ply",
+    "trajectory_path": "data/new_preview/Library_07_trajectory.json"
+  },
+  {
+    "name": "Library_08",
+    "ply_path": "data/new_preview/Library_08.ply",
+    "trajectory_path": "data/new_preview/Library_08_trajectory.json"
+  },
+  {
+    "name": "Library_09",
+    "ply_path": "data/new_preview/Library_09.ply",
+    "trajectory_path": "data/new_preview/Library_09_trajectory.json"
+  },
+  {
+    "name": "Lobby_01",
+    "ply_path": "data/new_preview/Lobby_01.ply",
+    "trajectory_path": "data/new_preview/Lobby_01_trajectory.json"
+  },
+  {
+    "name": "Lounge_01",
+    "ply_path": "data/new_preview/Lounge_01.ply",
+    "trajectory_path": "data/new_preview/Lounge_01_trajectory.json"
+  },
+  {
+    "name": "Office_01",
+    "ply_path": "data/new_preview/Office_01.ply",
+    "trajectory_path": "data/new_preview/Office_01_trajectory.json"
+  },
+  {
+    "name": "Parking_01",
+    "ply_path": "data/new_preview/Parking_01.ply",
+    "trajectory_path": "data/new_preview/Parking_01_trajectory.json"
+  },
+  {
+    "name": "Parking_02",
+    "ply_path": "data/new_preview/Parking_02.ply",
+    "trajectory_path": "data/new_preview/Parking_02_trajectory.json"
+  },
+  {
+    "name": "Stairs_01",
+    "ply_path": "data/new_preview/Stairs_01.ply",
+    "trajectory_path": "data/new_preview/Stairs_01_trajectory.json"
+  },
+  {
+    "name": "Stairs_02",
+    "ply_path": "data/new_preview/Stairs_02.ply",
+    "trajectory_path": "data/new_preview/Stairs_02_trajectory.json"
+  },
+  {
+    "name": "Station_01",
+    "ply_path": "data/new_preview/Station_01.ply",
+    "trajectory_path": "data/new_preview/Station_01_trajectory.json"
+  }
+]
