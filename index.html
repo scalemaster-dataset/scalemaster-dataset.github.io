@@ -959,7 +959,7 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
         }
 
         function loadTrajectory(sequenceName) {
-            const jsonPath = `data/preview/${sequenceName}_trajectory.json`;
+            const jsonPath = `data/new_preview/${sequenceName}_trajectory.json`;
 
             fetch(jsonPath)
                 .then(response => response.json())
@@ -1023,7 +1023,7 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
                 currentPointCloud.material.dispose();
             }
 
-            const plyPath = `data/preview/${sequenceName}.ply`;
+            const plyPath = `data/new_preview/${sequenceName}.ply`;
             
             const loader = new PLYLoader();
             loader.load(
