@@ -1076,6 +1076,7 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
                 function(error) {
                     console.error('Error loading PLY:', error);
                     document.querySelector('.loading-text').textContent = 'Error loading file!';
+                    document.getElementById('loading').style.display = 'none';
                 }
             );
         };
