@@ -1032,10 +1032,10 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
                     geometry.computeVertexNormals();
 
                     const material = new THREE.PointsMaterial({
-                        size: 0.02,
+                        size: 2,
                         vertexColors: geometry.attributes.color ? true : false,
                         color: geometry.attributes.color ? 0xffffff : 0x667eea,
-                        sizeAttenuation: true
+                        sizeAttenuation: false
                     });
 
                     currentPointCloud = new THREE.Points(geometry, material);
