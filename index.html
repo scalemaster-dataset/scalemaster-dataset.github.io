@@ -519,16 +519,16 @@
 <body>
     <header>
         <div class="award-badge">
-            ICRA 2026 Accpeted
+            ICRA 2026 Accepted
         </div>
         
         <h1>ScaleMaster Dataset</h1>
         <p class="subtitle">A Large-Scale Dataset and Benchmark for Evaluating Scale Consistency in Complex Indoor Environments</p>
         
         <div class="authors">
-            <a href="#">Hyoseok Ju</a><sup>1</sup>,
-            <a href="#">Bokeon Suh</a><sup>1</sup>,
-            <a href="#">Giseop Kim</a><sup>1†</sup>
+            <a href="https://scholar.google.com/citations?user=aYXHS9oAAAAJ&hl=ko" target="_blank" rel="noopener noreferrer">Hyoseok Ju</a><sup>1</sup>,
+            <a href="https://scholar.google.com/citations?user=ZawXymQAAAAJ&hl=ko" target="_blank" rel="noopener noreferrer">Bokeon Suh</a><sup>1</sup>,
+            <a href="https://scholar.google.com/citations?hl=ko&user=9mKOLX8AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">Giseop Kim</a><sup>1†</sup>
         </div>
         
         <div class="affiliations">
@@ -536,11 +536,15 @@
         </div>
         
         <div class="button-group">
-            <a href="https://github.com/JooHyoSeok/ScaleMaster-Dataset" class="btn">
+            <a href="https://arxiv.org/pdf/2602.18174" class="btn" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icon">📄</span>
+                Paper
+            </a>
+            <a href="https://github.com/JooHyoSeok/ScaleMaster-Dataset" class="btn" target="_blank" rel="noopener noreferrer">
                 <span class="btn-icon">💻</span>
                 GitHub
             </a>
-            <a href="https://forms.gle/C7jjz3hiT5JHppJ87" class="btn">
+            <a href="https://forms.gle/C7jjz3hiT5JHppJ87" class="btn" target="_blank" rel="noopener noreferrer">
                 <span class="btn-icon">📥</span>
                 Download Dataset
             </a>
@@ -582,6 +586,45 @@
                     <span class="stat-value shrink">RGB+D+IMU</span>
                     <span class="stat-label">Data Type</span>
                 </div>
+            </div>
+        </section>
+
+        <!-- SE(3) Pose Generation -->
+        <section class="section">
+            <h2>Baseline SE(3) Pose Refinement</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">
+                Raw ARKit VIO poses accumulate drift over long trajectories. We correct this by manually identifying loop closures and optimizing the pose graph to produce drift-corrected ground-truth poses.
+            </p>
+            <div style="max-width: 860px; margin: 0 auto 30px; background: #f8f9fa; border-radius: 12px; padding: 28px 32px;">
+                <h3 style="margin: 0 0 12px; font-size: 1.05rem;">Pipeline Overview</h3>
+                <ol style="margin: 0; padding-left: 20px; line-height: 2; color: #444;">
+                    <li><strong>ARKit VIO odometry</strong> — Raw 6-DoF poses captured from Apple ARKit; drift accumulates over large-scale trajectories.</li>
+                    <li><strong>HLoc retrieval</strong> — NetVLAD selects loop closure candidates; SuperPoint + LightGlue verifies geometric consistency via Essential-matrix.</li>
+                    <li><strong>Manual verification</strong> — Each candidate is accepted or rejected interactively, ensuring only reliable loop pairs are used.</li>
+                    <li><strong>SE(3) relative pose estimation</strong> — Depth Anything V3 provides metric depth to compute the 6-DoF transform between accepted loop pairs.</li>
+                    <li><strong>GTSAM PGO</strong> — Pose graph optimization jointly minimizes odometry and loop closure residuals, yielding drift-corrected trajectories.</li>
+                </ol>
+            </div>
+            <div style="max-width: 860px; margin: 0 auto 20px;">
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 1.05rem;">Before / After Pose Graph Optimization</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <img src="resources/pose_generation/result_01_before_after.png" alt="Before/After PGO 1" style="width: 100%; border-radius: 8px;">
+                    <img src="resources/pose_generation/result_02_before_after.png" alt="Before/After PGO 2" style="width: 100%; border-radius: 8px;">
+                    <img src="resources/pose_generation/result_03_before_after.png" alt="Before/After PGO 3" style="width: 100%; border-radius: 8px;">
+                    <img src="resources/pose_generation/result_04_before_after.png" alt="Before/After PGO 4" style="width: 100%; border-radius: 8px;">
+                </div>
+                <p style="text-align: center; color: #888; font-size: 0.85rem; margin-top: 10px;">Red = trajectory before PGO &nbsp;|&nbsp; Yellow = trajectory after PGO &nbsp;|&nbsp; Green = verified loop closures</p>
+            </div>
+            <div style="max-width: 860px; margin: 0 auto 10px;">
+                <h3 style="text-align: center; margin-bottom: 12px; font-size: 1.05rem;">Rerun Visualization</h3>
+                <img src="resources/pose_generation/rerun_visualization.png" alt="Rerun visualization" style="width: 100%; border-radius: 8px;">
+                <p style="text-align: center; color: #888; font-size: 0.85rem; margin-top: 8px;">3D trajectory with camera frustums, loop closure edges, and RGB images in Rerun.</p>
+            </div>
+            <div style="max-width: 860px; margin: 24px auto 0;">
+                <h3 style="text-align: center; margin-bottom: 12px; font-size: 1.05rem;">Demo</h3>
+                <video controls style="width: 100%; border-radius: 8px;">
+                    <source src="resources/pose_generation/demo.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
@@ -851,7 +894,8 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
   title={Have We Mastered Scale in Deep Monocular Visual SLAM? The ScaleMaster Dataset and Benchmark},
   author={Ju, Hyoseok and Suh, Bokeon and Kim, Giseop},
   booktitle={Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
-  year={2026}
+  year={2026},
+  note={To appear}
 }</pre>
             </div>
         </section>
@@ -1004,6 +1048,7 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
         }
 
         window.viewSequence = function(sequenceName) {
+            history.pushState({ seq: sequenceName }, '', '?seq=' + encodeURIComponent(sequenceName));
             document.getElementById('viewer-modal').classList.add('active');
             document.getElementById('modal-title').textContent = sequenceName.replace(/_/g, ' ');
             document.getElementById('modal-subtitle').textContent = 'Loading preview...';
@@ -1097,7 +1142,15 @@ git clone https://github.com/JooHyoSeok/ScaleMaster-Dataset</code></pre>
 
         window.closeViewer = function() {
             document.getElementById('viewer-modal').classList.remove('active');
+            history.pushState({}, '', location.pathname);
         };
+
+        // Deep link: open sequence from URL on load
+        (function() {
+            const params = new URLSearchParams(location.search);
+            const seq = params.get('seq');
+            if (seq) viewSequence(seq);
+        })();
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
